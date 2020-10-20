@@ -11,22 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="new_article_label"><%= form.label :title %></div>
+  <div class="new_input"><%= form.text_field :title %></div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+  <div class="new_article_label"><%= form.label :body %></div>
+  <div class="new_body"><%= form.text_area :body %></div>
 
-  <div class="field">
-    <%= form.label :signature %>
-    <%= form.text_field :signature %>
-  </div>
+  <div class="new_article_label"><%= form.label :signature %></div>
+  <div class="new_input"><%= form.text_field :signature %></div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div class="new_submit"><%= form.submit %></div>
 <% end %>

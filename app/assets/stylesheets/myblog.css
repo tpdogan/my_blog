@@ -1,0 +1,31 @@
+body
+  {display: flex; justify-content: center;
+  font-family: 'Ubuntu','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.new_article_form
+  {min-width: 400px; background-color: #ece2de; text-align: center;
+  border-radius: 10px;}
+.new_article_label
+  {font-size: 18px; margin-bottom: 5px;}
+.new_input
+  {margin-bottom: 10px;}
+.new_input > input
+  {width: 250px; border: 2px solid #C4C4C4; border-radius: 5px; padding: 5px;}
+.new_input > input:focus
+  {border-color: #F3AA90;}
+.new_body
+  {margin-bottom: 10px;}
+.new_body > textarea
+  {width: 300px; height: 500px; resize: none; font-family: 'Ubuntu'; font-size: 14px;
+  border-collapse: collapse; border: 2px solid #C4C4C4; border-radius: 5px;
+  padding: 5px;}
+.new_body > textarea:focus
+  {border-color: #F3AA90;}
+.new_submit > input
+  {font-size: 15px; color: #E95420; font-weight: 900; margin-bottom: 10px;}
+.linkto
+  {margin-bottom: 10px;}
+.linkto > a
+  {color: #E95420; text-decoration: none;}
+.linkto > a:hover
+  {color: #923513;}
+/* for tests  background-color: #E95420;*/
