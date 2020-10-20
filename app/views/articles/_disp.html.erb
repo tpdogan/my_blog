@@ -1,0 +1,4 @@
+<h2 class="showtitle"><%= article.title %></h2>
+<p class="showbody"><%= article.body %></p>
+<p class="showsignature">Created by: <%= link_to article.signature, "#" %></p>
+<p class="showtime">Created at: <%= article.created_at_was.strftime("%d %B %Y") %></p>

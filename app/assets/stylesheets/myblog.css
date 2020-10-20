@@ -1,6 +1,27 @@
 body
-  {display: flex; justify-content: center;
-  font-family: 'Ubuntu','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+  {display: grid; justify-content: space-around; flex-direction: column;
+  font-family: 'Ubuntu','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;}
+/* index page classes */
+.latestarticle
+  {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ece2de;
+  padding-left: 15px; padding-right: 15px;}
+.articlelist
+  {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ddd4d0;}
+.articlelist > ul
+  {list-style-type: '» '; line-height: 30px; text-align: start;}
+
+/* show article classes */
+.showtitle
+  {}
+.showbody
+  {text-align: justify;}
+.showsignature
+  {text-align: right;}
+.showtime
+  {text-align: right;}
+
+/* new article form classes */
 .new_article_form
   {min-width: 400px; background-color: #ece2de; text-align: center;
   border-radius: 10px;}
@@ -29,3 +50,5 @@ body
 .linkto > a:hover
   {color: #923513;}
 /* for tests  background-color: #E95420;*/
+.test
+  {width: 250px; height: 250px; background-color: antiquewhite;}

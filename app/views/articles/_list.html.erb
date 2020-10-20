@@ -1,0 +1,8 @@
+<div class="articlelist">
+  <h2>All articles</h2>
+  <ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, article %> (<%= article.signature %>)</li>
+  <% end %>
+  </ul>
+</div>
