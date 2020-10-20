@@ -1,8 +1,9 @@
 <div class="articlelist">
   <h2>All articles</h2>
   <ul>
-  <% @articles.each do |article| %>
-    <li><%= link_to article.title, article %> (<%= article.signature %>)</li>
+  <% @articles.reverse_each do |article| %>
+    <li class="navlinks"><%= link_to article.title, article %> (<%= link_to article.signature, "#" %>)</li>
   <% end %>
   </ul>
+  <h3 class="new_article_link"><%= link_to "WRITE NEW ARTICLE NOW!", new_article_path %></h3>
 </div>

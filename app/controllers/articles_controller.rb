@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if  @article.title == '' || @article.body == '' || @article.signature == ''
-      flash.notice = "All fields must contain text!"
+      flash.now.notice = "All fields must contain text!"
       render :new
       return
     end

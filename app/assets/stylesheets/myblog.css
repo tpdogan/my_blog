@@ -1,13 +1,20 @@
 body
   {display: grid; justify-content: space-around; flex-direction: column;
   font-family: 'Ubuntu','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f2f2;}
+  background-color: #f2f2f2; padding: 0; margin: 0;}
+.navlinks > a
+  {text-decoration: none; color: rgb(0, 0, 80);}
+/* Welcome message */
+.welcome
+  {min-width: 400px; max-width: 1000px;text-align: center; background-color: #c23801;
+  padding: 15px; padding-right: 15px;}
 /* index page classes */
 .latestarticle
   {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ece2de;
   padding-left: 15px; padding-right: 15px;}
 .articlelist
-  {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ddd4d0;}
+  {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ddd4d0;
+  padding-left: 15px; padding-right: 15px;}
 .articlelist > ul
   {list-style-type: '» '; line-height: 30px; text-align: start;}
 
@@ -18,10 +25,17 @@ body
   {text-align: justify;}
 .showsignature
   {text-align: right;}
+.showsignature > a
+  {text-decoration: none; color: rgb(0, 0, 80);}
 .showtime
   {text-align: right;}
 
 /* new article form classes */
+.new_article_link > a
+  {color: rgb(0, 0, 80); border: 3px solid rgb(0, 0, 80); border-radius: 5px;
+  text-decoration: none; padding: 3px;}
+.new_article_link > a:hover
+  {color: rgb(0, 0, 255); border: 3px solid rgb(0, 0, 225);}
 .new_article_form
   {min-width: 400px; background-color: #ece2de; text-align: center;
   border-radius: 10px;}
