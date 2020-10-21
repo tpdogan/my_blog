@@ -1,7 +1,23 @@
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-  <% @author.articles.each do |article| %>
-    <%= link_to article.title, article_path(article) %>
-  <% end %>
-</p>
+<%= render 'articles/column', article: @articles %>
+
+<div class="main">
+  <div class="welcome">Welcome to my blog, feel free to contribute!</div>
+    <div class="latestarticle">
+        <h2 class="showtitle">Author Name: <%= @author.name %></h2>
+        <div class="outlisting">
+        <div class="listing">
+        <h3 class="top-margin-10px">Contributions</h3>
+        <ul>
+        <% @author.articles.each do |article| %>
+          <li class="navlinks"><%= link_to article.title, article_path(article) %></li>
+        <% end %>
+        </ul>
+        </div>
+        </div>
+    </div>
+
+    <%= render 'articles/list' %>
+    <div class="main_page_link"><%= link_to 'Main Page', articles_path %></div>
+</div>
+
+<%= render 'articles/column', article: @articles %>

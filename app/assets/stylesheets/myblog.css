@@ -113,6 +113,14 @@ h1, h2, h3, h4, p
 .comment_user
   {padding: 5px; font-weight: 900;}
 
+/* show author */
+.outlisting
+  {display: flex; flex-direction: column; align-items: center;}
+.listing > ul
+  {list-style-type: '✍ '; line-height: 30px; text-align: start;}
+.top-margin-10px
+  {margin-top: 10px;}
+
 /* for tests  background-color: #E95420;*/
 .test
   {width: 250px; height: 250px; background-color: antiquewhite;}

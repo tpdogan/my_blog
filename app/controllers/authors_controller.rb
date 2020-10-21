@@ -11,6 +11,7 @@ class AuthorsController < ApplicationController
   # GET /authors/1.json
   def show
     @author = Author.find(params[:id])
+    @articles = Article.all
   end
 
   # GET /authors/new
