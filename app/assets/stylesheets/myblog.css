@@ -94,6 +94,8 @@ h1, h2, h3, h4, p
 /* comment classes */
 .commentbox
   {background-color: #ddd4d0; text-align: center; padding: 20px;}
+.commentbox > h2
+  {margin-bottom: 10px;}
 .new_comment
   {margin-bottom: 10px;}
 .new_comment > textarea
@@ -102,6 +104,10 @@ h1, h2, h3, h4, p
   padding: 5px;}
 .new_comment > textarea:focus
   {border-color: #F3AA90;}
+.eachcomment
+  {width: 100%;}
+.comment_user
+  {padding: 5px; font-weight: 900;}
 
 /* for tests  background-color: #E95420;*/
 .test

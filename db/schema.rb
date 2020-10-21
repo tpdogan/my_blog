@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_130235) do
+ActiveRecord::Schema.define(version: 2020_10_21_151705) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.string "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,6 +33,15 @@ ActiveRecord::Schema.define(version: 2020_10_21_130235) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
+  end
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer "author_id"
+    t.integer "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_taggings_on_article_id"
+    t.index ["author_id"], name: "index_taggings_on_author_id"
   end
 
 end
