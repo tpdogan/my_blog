@@ -30,7 +30,7 @@ h1, h2, h3, h4, p
 .latesttitle
   {padding-top: 15px;}
 .articlelist
-  {max-width: 1000px; text-align: center; background-color: #ddd4d0;
+  {max-width: 1000px; text-align: center; background-color: #cfc7c3;
   padding-left: 15px; padding-right: 15px;}
 .articlelist > ul
   {list-style-type: '» '; line-height: 30px; text-align: start;}
@@ -90,6 +90,19 @@ h1, h2, h3, h4, p
   {color: #E95420; text-decoration: none;}
 .linkto > a:hover
   {color: #923513; text-decoration: underline;}
+
+/* comment classes */
+.commentbox
+  {background-color: #ddd4d0; text-align: center; padding: 20px;}
+.new_comment
+  {margin-bottom: 10px;}
+.new_comment > textarea
+  {width: 300px; height: 100px; resize: none; font-family: 'Ubuntu'; font-size: 14px;
+  border-collapse: collapse; border: 2px solid #C4C4C4; border-radius: 5px;
+  padding: 5px;}
+.new_comment > textarea:focus
+  {border-color: #F3AA90;}
+
 /* for tests  background-color: #E95420;*/
 .test
   {width: 250px; height: 250px; background-color: antiquewhite;}
