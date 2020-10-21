@@ -1,5 +1,5 @@
 body
-  {display: grid; grid-template-columns: 10% auto 10%; grid-gap: 0;
+  {display: grid; grid-template-columns: 25% auto 25%; grid-gap: 0;
   justify-content: space-around;
   font-family: 'Ubuntu','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2f2f2; padding: 0; margin: 0;}
@@ -11,18 +11,23 @@ h1, h2, h3, h4, p
   {text-decoration: underline;}
 /* Welcome message */
 .welcome
-  {min-width: 400px; max-width: 1000px;text-align: center; background-color: #c23801;
+  {max-width: 1000px;text-align: center; background-color: #c23801;
   padding: 15px; padding-right: 15px;}
 /* index page classes */
+.columns
+  {width: 100%; background-color: teal; display: flex; justify-content: center;}
+.articlebox
+  {width: 80%; height: 200px; overflow: hidden; margin-top: 20px; padding: 10px;
+  border: 1px solid black; cursor: pointer;}
 .main
-  {min-width: 400px; max-width: 1000px;}
+  {max-width: 1000px;}
 .latestarticle
-  {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ece2de;
+  {max-width: 1000px; text-align: center; background-color: #ece2de;
   padding-left: 15px; padding-right: 15px;}
 .latesttitle
   {padding-top: 15px;}
 .articlelist
-  {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ddd4d0;
+  {max-width: 1000px; text-align: center; background-color: #ddd4d0;
   padding-left: 15px; padding-right: 15px;}
 .articlelist > ul
   {list-style-type: '» '; line-height: 30px; text-align: start;}
@@ -56,7 +61,7 @@ h1, h2, h3, h4, p
 .new_article_link > a:hover
   {color: rgb(0, 0, 255); border: 3px solid rgb(0, 0, 225);}
 .new_article_form
-  {min-width: 400px; background-color: #ece2de; text-align: center;
+  {background-color: #ece2de; text-align: center;
   border-radius: 10px;}
 .new_article_label
   {font-size: 18px; margin-bottom: 5px;}
@@ -85,3 +90,9 @@ h1, h2, h3, h4, p
 /* for tests  background-color: #E95420;*/
 .test
   {width: 250px; height: 250px; background-color: antiquewhite;}
+@media (max-width: 768px)
+  {
+    body {grid-template-columns: 80%; justify-content: space-around; top: 0;}
+    .columns {height: 0; width: 0; overflow: hidden;}
+    /*.main {min-width: 0;}*/
+  }

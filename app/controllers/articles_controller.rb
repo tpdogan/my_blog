@@ -51,6 +51,8 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    #new_params = article_params
+    #new_params[:signature] = new_params[:signature] + " Edited"
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -67,7 +69,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to articles_path, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

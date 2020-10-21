@@ -1,5 +1,12 @@
-<div class="latestarticle">
-  <h1 class="latesttitle">Latest Article</h1>
-  <%= render 'disp', article: @articles[@articles.length-1] %>
+<%= render 'column', article: @articles %>
+
+<div class="main">
+  <div class="welcome">Welcome to my blog, feel free to contribute!</div>
+    <div class="latestarticle">
+      <h1 class="latesttitle">Latest Article</h1>
+      <%= render 'disp', article: @articles[@articles.length-1] %>
+    </div>
+    <%= render 'list' %>
 </div>
-<%= render 'list' %>
+
+<%= render 'column', article: @articles %>
