@@ -1,5 +1,5 @@
 <div class="articlelist">
-  <h2>All articles</h2>
+  <h2 class="showtitle">All articles</h2>
   <ul>
   <% @articles.reverse_each do |article| %>
     <li class="navlinks"><%= link_to article.title, article %> (<%= link_to article.signature, "#" %>)</li>

@@ -1,17 +1,26 @@
 body
-  {display: grid; justify-content: space-around; flex-direction: column;
+  {display: grid; grid-template-columns: 10% auto 10%; grid-gap: 0;
+  justify-content: space-around;
   font-family: 'Ubuntu','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2f2f2; padding: 0; margin: 0;}
+h1, h2, h3, h4, p
+  {margin: 0;}
 .navlinks > a
   {text-decoration: none; color: rgb(0, 0, 80);}
+.navlinks > a:hover
+  {text-decoration: underline;}
 /* Welcome message */
 .welcome
   {min-width: 400px; max-width: 1000px;text-align: center; background-color: #c23801;
   padding: 15px; padding-right: 15px;}
 /* index page classes */
+.main
+  {min-width: 400px; max-width: 1000px;}
 .latestarticle
   {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ece2de;
   padding-left: 15px; padding-right: 15px;}
+.latesttitle
+  {padding-top: 15px;}
 .articlelist
   {min-width: 400px; max-width: 1000px; text-align: center; background-color: #ddd4d0;
   padding-left: 15px; padding-right: 15px;}
@@ -20,17 +29,27 @@ body
 
 /* show article classes */
 .showtitle
-  {}
+  {padding: 15px;}
 .showbody
   {text-align: justify;}
 .showsignature
-  {text-align: right;}
+  {text-align: right; padding-top: 20px;}
 .showsignature > a
   {text-decoration: none; color: rgb(0, 0, 80);}
+.showsignature > a:hover
+  {text-decoration: underline;}
 .showtime
-  {text-align: right;}
+  {text-align: right; padding-top: 20px; padding-bottom: 10px;}
+.main_page_link
+  {width: 100%; text-align: center; padding-top: 20px; padding-bottom: 0;}
+.main_page_link > a
+  {text-decoration: none; color: #c23801; border-radius: 5px; padding: 5px; font-weight: 900;}
+.main_page_link > a:hover
+  {color: white; background-color: #c23801;}
 
 /* new article form classes */
+.new_article_link
+  {margin: 0; padding-top: 10px; padding-bottom: 20px;}
 .new_article_link > a
   {color: rgb(0, 0, 80); border: 3px solid rgb(0, 0, 80); border-radius: 5px;
   text-decoration: none; padding: 3px;}
@@ -62,7 +81,7 @@ body
 .linkto > a
   {color: #E95420; text-decoration: none;}
 .linkto > a:hover
-  {color: #923513;}
+  {color: #923513; text-decoration: underline;}
 /* for tests  background-color: #E95420;*/
 .test
   {width: 250px; height: 250px; background-color: antiquewhite;}
