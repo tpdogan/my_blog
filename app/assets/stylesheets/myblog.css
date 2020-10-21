@@ -15,10 +15,13 @@ h1, h2, h3, h4, p
   padding: 15px; padding-right: 15px;}
 /* index page classes */
 .columns
-  {width: 100%; background-color: teal; display: flex; justify-content: center;}
+  {width: 100%; display: flex; align-items: center; flex-direction: column;}
 .articlebox
   {width: 80%; height: 200px; overflow: hidden; margin-top: 20px; padding: 10px;
-  border: 1px solid black; cursor: pointer;}
+  border: 1px solid black; cursor: pointer; background-color: rgb(255, 247, 234);
+  border-radius: 5px; box-shadow: 1px 0px 18px 5px #a19a97;}
+.articlebox:hover
+  {padding: 15px; background-color: rgb(255, 214, 147);}
 .main
   {max-width: 1000px;}
 .latestarticle
@@ -62,7 +65,7 @@ h1, h2, h3, h4, p
   {color: rgb(0, 0, 255); border: 3px solid rgb(0, 0, 225);}
 .new_article_form
   {background-color: #ece2de; text-align: center;
-  border-radius: 10px;}
+  border-radius: 10px; padding: 20px;}
 .new_article_label
   {font-size: 18px; margin-bottom: 5px;}
 .new_input

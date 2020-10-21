@@ -1,3 +1,5 @@
+<%= render 'column', article: @articles %>
+
 <div class = "new_article_form">
   <h1>New Article</h1>
 
@@ -7,3 +9,5 @@
 
   <div class="flash"><%= flash.notice %></div>
 </div>
+
+<%= render 'column', article: @articles %>

@@ -20,16 +20,19 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    @articles = Article.all
   end
 
   # GET /articles/1/edit
   def edit
+    @articles = Article.all
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @articles = Article.all
 
     if  @article.title == '' || @article.body == '' || @article.signature == ''
       flash.now.notice = "All fields must contain text!"
