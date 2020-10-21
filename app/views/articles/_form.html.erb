@@ -17,7 +17,8 @@
   <div class="new_article_label"><%= form.label :body %></div>
   <div class="new_body"><%= form.text_area :body %></div>
 
-  <div class="new_article_label"><%= form.label :signature %></div>
+  <%= notice %>
+  <div class="new_article_label">Created by</div>
   <div class="new_input"><%= form.text_field :signature %></div>
 
   <div class="new_submit"><%= form.submit %></div>

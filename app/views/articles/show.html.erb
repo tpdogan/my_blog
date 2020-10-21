@@ -5,7 +5,7 @@
     <div class="latestarticle">
       <%= render 'disp', article: @article %>
     </div>
-
+    
     <% if @article.comments.length != 0 %>
     <div class="commentbox">
       <h2>Comments</h2>
@@ -16,7 +16,7 @@
 
     <%= render 'list' %>
     <div class="main_page_link"><%= link_to 'Main Page', articles_path %></div>
-    <div class="main_page_link"><%#= link_to 'Edit This Article', edit_article_path(@article) %></div>
+    <div class="main_page_link"><%= link_to 'Edit This Article', edit_article_path(@article) %></div>
 </div>
 
 <%= render 'column', article: @articles %>

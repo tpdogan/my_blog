@@ -39,15 +39,15 @@ h1, h2, h3, h4, p
 .showtitle
   {padding: 15px;}
 .showbody
-  {text-align: justify;}
+  {text-align: justify; padding-bottom: 10px;}
 .showsignature
-  {text-align: right; padding-top: 20px;}
+  {text-align: right; padding-top: 10px; padding-bottom: 10px;}
 .showsignature > a
   {text-decoration: none; color: rgb(0, 0, 80);}
 .showsignature > a:hover
   {text-decoration: underline;}
 .showtime
-  {text-align: right; padding-top: 20px; padding-bottom: 10px;}
+  {text-align: right; padding-top: 10px; padding-bottom: 10px;}
 .main_page_link
   {width: 100%; text-align: center; padding-top: 20px; padding-bottom: 0;}
 .main_page_link > a
@@ -90,6 +90,10 @@ h1, h2, h3, h4, p
   {color: #E95420; text-decoration: none;}
 .linkto > a:hover
   {color: #923513; text-decoration: underline;}
+
+/* edit article classes */
+.original_author
+  {padding: 10px; margin-bottom: 10px; background-color: #a19a97;}
 
 /* comment classes */
 .commentbox

@@ -22,9 +22,12 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    author_list = article_params[:signature]
+    @article.author_list += ", " + author_list
+    
     @articles = Article.all
 
-    if  @article.title == '' || @article.body == '' || @article.signature == ''
+    if @article.title == '' || @article.body == '' || @article.signature == ''
       flash.now.notice = "All fields must contain text!"
       render :new
       return
@@ -32,7 +35,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to @article}
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
@@ -42,21 +45,28 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-        format.json { render :show, status: :ok, location: @article }
-      else
-        format.html { render :edit }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    @articles = Article.all
+    
+    if @article.title == '' || @article.body == '' || @article.signature == ''
+      flash.now.notice = "All fields must contain text!"
+      render :edit
+      return
     end
+
+    author_list = article_params[:signature]
+    @article.author_list += ", " + author_list
+
+    origin = Article.find(params[:id])
+    params[:article][:signature] = origin.signature
+    @article.update(article_params)
+
+    redirect_to @article
   end
 
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_path, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to articles_path }
       format.json { head :no_content }
     end
   end
@@ -67,6 +77,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :body, :signature)
+      params.require(:article).permit(:title, :body, :signature, :author_list)
     end
 end
