@@ -2,13 +2,12 @@
   <% article = @articles[rand(@articles.length-1)] %>
   <div class="articlebox" id=<%= article_path(article) %> >
     <h2 class="showtitle"><%= article.title %></h2>
-    <p class="showbody"><%= article.body[0..60] + "..." %></p>
-    <p class="showsignature">Created by: <%= link_to article.signature, '#' %></p>
+    <p class="showbody"><%= article.body%></p>
+    
   </div>
   <% article = @articles[rand(@articles.length-1)] %>
   <div class="articlebox" id=<%= article_path(article) %> >
     <h2 class="showtitle"><%= article.title %></h2>
-    <p class="showbody"><%= article.body[0..60] + "..." %></p>
-    <p class="showsignature">Created by: <%= link_to article.signature, '#' %></p>
+    <p class="showbody"><%= article.body%></p>
   </div>
 </div>
