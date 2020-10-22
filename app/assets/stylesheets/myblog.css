@@ -17,7 +17,7 @@ h1, h2, h3, h4, p
 .columns
   {width: 100%; display: flex; align-items: center; flex-direction: column;}
 .articlebox
-  {width: 80%; height: 200px; overflow: hidden; margin-top: 20px; padding: 10px;
+  {width: 80%; height: 200px; overflow: hidden; margin-bottom: 40px; padding: 10px;
   border: 1px solid black; cursor: pointer; background-color: rgb(255, 247, 234);
   border-radius: 5px; box-shadow: 1px 0px 18px 5px #a19a97;}
 .articlebox:hover
@@ -49,7 +49,7 @@ h1, h2, h3, h4, p
 .showtime
   {text-align: right; padding-top: 10px; padding-bottom: 10px;}
 .main_page_link
-  {width: 100%; text-align: center; padding-top: 20px; padding-bottom: 0;}
+  {width: 100%; text-align: center; padding-top: 20px; padding-bottom: 20px;}
 .main_page_link > a
   {text-decoration: none; color: #c23801; border-radius: 5px; padding: 5px; font-weight: 900;}
 .main_page_link > a:hover
@@ -83,7 +83,10 @@ h1, h2, h3, h4, p
 .new_body > textarea:focus
   {border-color: #F3AA90;}
 .new_submit > input
-  {font-size: 15px; color: #E95420; font-weight: 900; margin-bottom: 10px;}
+  {font-size: 15px; color: #E95420; font-weight: 900; margin-bottom: 10px; cursor: pointer;
+  padding: 0;}
+.new_submit > input:hover
+  {scale: 1.1; font-weight: 900;}
 .linkto
   {margin-bottom: 10px;}
 .linkto > a

@@ -7,3 +7,4 @@
 <p class="showsignature">Created by: <%= link_to article.signature, author_path(Author.find_or_create_by(name: article.signature)) %> (<%= link_to "Original", article_path(:id => article.id, :recall => true) %>)</p>
 <p class="showtime">Created at: <%= article.created_at_was.strftime("%d %B %Y") %></p>
 <p class="showsignature">Edited by: <% article.authors.each do |author| %> <%= link_to author.name, author_path(author) %> <% end %></p>
+<div class="main_page_link"><%= link_to 'Edit This Article', edit_article_path(article) %></div>

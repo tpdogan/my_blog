@@ -1,4 +1,4 @@
-<%= render 'column', article: @articles %>
+<%= render 'column', article: @articles, locale: {side: "left"} %>
 
 <div class = "new_article_form">
   <h1>New Article</h1>
@@ -10,4 +10,4 @@
   <div class="flash"><%#= flash.notice %></div>
 </div>
 
-<%= render 'column', article: @articles %>
+<%= render 'column', article: @articles, locale: {side: "right"} %>

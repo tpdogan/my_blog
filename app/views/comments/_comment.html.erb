@@ -1,5 +1,8 @@
 <div class="eachcomment">
 <label class="comment_user"><%= comment.user %>:</label>
 <label class="comment_body"><%= comment.body %></label>
+<label class="comment_body"><%= comment.id %></label>
+<label class="comment_body"><%= comment.article.id %></label>
+<%#= link_to 'Destroy', article_comment_path(comment.article.id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
 </div>
 <br/>
