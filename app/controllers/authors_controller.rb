@@ -4,7 +4,8 @@ class AuthorsController < ApplicationController
   # GET /authors
   # GET /authors.json
   def index
-    @authors = Author.all
+    #@authors = Author.all
+    redirect_to articles_path
   end
 
   # GET /authors/1
@@ -16,7 +17,8 @@ class AuthorsController < ApplicationController
 
   # GET /authors/new
   def new
-    @author = Author.new
+    #@author = Author.new
+    redirect_to articles_path
   end
 
   # GET /authors/1/edit
