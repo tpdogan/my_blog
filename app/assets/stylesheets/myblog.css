@@ -39,7 +39,7 @@ h1, h2, h3, h4, p
 .showtitle
   {padding: 15px;}
 .showbody
-  {text-align: justify; padding-bottom: 10px;}
+  {text-align: justify; padding-bottom: 10px; white-space: pre-wrap;}
 .showsignature
   {text-align: right; padding-top: 10px; padding-bottom: 10px;}
 .showsignature > a

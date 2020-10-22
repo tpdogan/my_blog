@@ -1,4 +1,4 @@
-<%= render 'articles/column', article: @articles %>
+<%= render 'articles/column', article: @articles, locale: {side: "left"} %>
 
 <div class="main">
   <div class="welcome">Welcome to my blog, feel free to contribute!</div>
@@ -20,4 +20,4 @@
     <div class="main_page_link"><%= link_to 'Main Page', articles_path %></div>
 </div>
 
-<%= render 'articles/column', article: @articles %>
+<%= render 'articles/column', article: @articles, locale: {side: "right"} %>
