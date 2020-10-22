@@ -1,0 +1,18 @@
+<div class="columns">
+  <% if locale[:side] == "left" %>
+    <div class="main_page_link"><%= link_to 'Main Page', articles_path unless article == nil %></div>
+  <% elsif locale[:side] == "right" %>
+    <div class="main_page_link"><%= link_to "WRITE NEW ARTICLE!", new_article_path unless article == nil %></div>
+  <%end%>
+  <% article = @articles[rand(@articles.length-1)] unless article == nil %>
+  <div class="articlebox" id=<%= article_path(article) unless article == nil %> >
+    <h2 class="showtitle"><%= article.title unless article == nil %></h2>
+    <p class="showbody"><%= article.body unless article == nil %></p>
+    
+  </div>
+  <% article = @articles[rand(@articles.length-1)] unless article == nil %>
+  <div class="articlebox" id=<%= article_path(article) unless article == nil %> >
+    <h2 class="showtitle"><%= article.title unless article == nil %></h2>
+    <p class="showbody"><%= article.body unless article == nil %></p>
+  </div>
+</div>
