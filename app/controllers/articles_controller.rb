@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
   def update
     @articles = Article.all
     
-    if @article.title == '' || @article.body == '' || @article.signature == ''
+    if params[:article][:title] == '' || params[:article][:body] == '' || params[:article][:signature] == ''
       flash.now.notice = "All fields must contain text!"
       render :edit
       return
