@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.original = params[:article][:body]
     author_list = article_params[:signature]
     @article.author_list += ", " + author_list
     

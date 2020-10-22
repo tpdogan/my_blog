@@ -1,5 +1,9 @@
 <h2 class="showtitle"><%= article.title %></h2>
-<p class="showbody"><%= article.body %></p>
-<p class="showsignature">Created by: <%= link_to article.signature, author_path(Author.find_or_create_by(name: article.signature)) %></p>
+<% if request.original_url.include?("recall=true") %>
+  <p class="showbody"><%= article.original %></p>
+<% else %>
+  <p class="showbody"><%= article.body %></p>
+<% end %>
+<p class="showsignature">Created by: <%= link_to article.signature, author_path(Author.find_or_create_by(name: article.signature)) %> (<%= link_to "Original", article_path(:id => article.id, :recall => true) %>)</p>
 <p class="showtime">Created at: <%= article.created_at_was.strftime("%d %B %Y") %></p>
 <p class="showsignature">Edited by: <% article.authors.each do |author| %> <%= link_to author.name, author_path(author) %> <% end %></p>
