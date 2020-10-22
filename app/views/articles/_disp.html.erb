@@ -1,3 +1,10 @@
-<h2 class="showtitle"><%= article.title unless article==nil %></h2>
-<p class="showbody"><%= article.body unless article==nil %></p>
-<p class="showsignature">Created by: </p>
+<h2 class="showtitle"><%= article.title unless article == nil %></h2>
+<% if request.original_url.include?("recall=true") %>
+  <p class="showbody"><%= article.original unless article == nil %></p>
+<% else %>
+  <p class="showbody"><%= article.body unless article == nil %></p>
+<% end %>
+<p class="showsignature">Created by: <%= link_to article.signature, author_path(Author.find_or_create_by(name: article.signature)) unless article == nil %> (<%= link_to "Original", article_path(:id => article.id, :recall => true) unless article == nil  %>)</p>
+<p class="showtime">Created at: <%= article.created_at_was.strftime("%d %B %Y") unless article == nil %></p>
+<p class="showsignature">Edited by: <% unless article == nil %><% article.authors.each do |author| %> <%= link_to author.name, author_path(author) %> <% end %><% end %></p>
+<div class="main_page_link"><%= link_to 'Edit This Article', edit_article_path(article) unless article == nil %></div>
