@@ -21,7 +21,7 @@ h1, h2, h3, h4, p
   border: 1px solid black; cursor: pointer; background-color: rgb(255, 247, 234);
   border-radius: 5px; box-shadow: 1px 0px 18px 5px #a19a97;}
 .articlebox:hover
-  {padding: 15px; background-color: rgb(255, 214, 147);}
+  {scale: 1.1; background-color: rgb(255, 214, 147);}
 .main
   {max-width: 1000px;}
 .latestarticle
